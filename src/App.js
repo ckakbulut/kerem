@@ -5,8 +5,7 @@ import Experience from "./components/Experience";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import "./App.css";
-import "./styles/Global.css";
+import "./styles/App.css";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
         <About />
         <Experience />
         <Projects />
-        <Contact />
         <Footer />
       </div>
       <SidebarNav />
