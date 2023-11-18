@@ -1,17 +1,16 @@
 import React from "react";
-import { TypeAnimation } from "react-type-animation";
+import Typist from "react-typist";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 
 function Intro() {
     return (
         <div id="intro">
-            <TypeAnimation
-                sequence={[1000, "Hi", 1000, "I'm Kerem"]}
-                wrapper="span"
-                speed={50}
-                style={{ fontsize: "2em", display: "inline-block" }}
-                repeat={0}
-            />
+            <Typist avgTypingDelay={150}>
+                <Typist.Delay ms={1500} />
+                {"Hi, "}
+                <span className="intro-name">{"Kerem"} </span>
+                {" here."}
+            </Typist>
             <div classname="intro-subtitle">
                 ex-@UCL | currently creating things and working on some stuff
             </div>
