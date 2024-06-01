@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -100,7 +100,7 @@ function SidebarNav() {
                                 style={{ fontSize: 20 }}
                             ></EmailRoundedIcon>
                         </StyledAnchor>
-                        <StyledAnchor href="https://github.com/yellowskybolt">
+                        <StyledAnchor href="https://github.com/ckakbulut">
                             <GitHubIcon style={{ fontSize: 19 }}></GitHubIcon>
                         </StyledAnchor>
                         <StyledAnchor href="https://www.linkedin.com/in/cankeremakbulut">
