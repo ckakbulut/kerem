@@ -26,7 +26,7 @@ function Intro() {
                 className="intro-contact"
             >
                 <EmailRoundedIcon></EmailRoundedIcon>
-                {"  " + "Say hi!"}
+                {"  Say hi!"}
             </a>
         </div>
     );
