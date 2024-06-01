@@ -8,18 +8,18 @@ import Footer from "./components/Footer";
 import "./styles/App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <div id="content">
-        <Intro />
-        <About />
-        <Experience />
-        <Projects />
-        <Footer />
-      </div>
-      <SidebarNav />
-    </div>
-  );
+    return (
+        <div className="App">
+            <div id="content">
+                <Intro />
+                <About />
+                <Experience />
+                <Projects />
+                <Footer />
+            </div>
+            <SidebarNav />
+        </div>
+    );
 }
 
 export default App;
