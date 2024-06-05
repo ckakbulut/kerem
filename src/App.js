@@ -6,6 +6,8 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import "./styles/App.css";
+import "./styles/Global.css";
+import "rsuite/dist/rsuite.min.css";
 
 function App() {
     return (
