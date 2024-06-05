@@ -1,15 +1,19 @@
 import React from "react";
 
+import FadeInSection from "./FadeInSection";
+
 function Footer() {
     return (
-        <div id="footer">
-            <div className="credits">
-                <div>
-                    Built by Can Kerem Akbulut, design inspired from Gazi Jarin.
+        <FadeInSection>
+            <div id="credits">
+                <div className="ending-credits">
+                    <div>
+                        Built by Can Kerem Akbulut, design taken from Gazi
+                        Jarin.{" "}
+                    </div>
                 </div>
-                <div>All rights reserved. ©</div>
             </div>
-        </div>
+        </FadeInSection>
     );
 }
 
