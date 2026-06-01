@@ -4,6 +4,7 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import SidebarNav from "@/components/SidebarNav";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Page() {
     return (
@@ -16,6 +17,7 @@ export default function Page() {
                 <Footer />
             </div>
             <SidebarNav />
+            <ThemeToggle />
         </div>
     );
 }

@@ -17,9 +17,16 @@ export const metadata = {
     },
 };
 
+const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.dataset.theme='light';}}catch(e){}})();`;
+
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={ntr.variable}>
+        <html lang="en" className={ntr.variable} suppressHydrationWarning>
+            <head>
+                <script
+                    dangerouslySetInnerHTML={{ __html: themeInitScript }}
+                />
+            </head>
             <body>{children}</body>
         </html>
     );
