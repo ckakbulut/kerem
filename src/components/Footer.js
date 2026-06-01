@@ -1,6 +1,5 @@
-import React from "react";
-
 import FadeInSection from "./FadeInSection";
+import "../styles/Footer.css";
 
 function Footer() {
     return (
@@ -8,8 +7,15 @@ function Footer() {
             <div id="credits">
                 <div className="ending-credits">
                     <div>
-                        Built by Can Kerem Akbulut, design taken from Gazi
-                        Jarin.{" "}
+                        Built by Can Kerem Akbulut — design adapted from{" "}
+                        <a
+                            href="https://gazijarin.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Gazi Jarin
+                        </a>
+                        .
                     </div>
                 </div>
             </div>

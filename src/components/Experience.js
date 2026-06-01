@@ -1,9 +1,8 @@
-import React from "react";
 import JobList from "./JobList";
 import "../styles/Experience.css";
 import FadeInSection from "./FadeInSection";
 
-const Experience = () => {
+function Experience() {
     return (
         <div id="experience">
             <FadeInSection>
@@ -14,6 +13,6 @@ const Experience = () => {
             </FadeInSection>
         </div>
     );
-};
+}
 
 export default Experience;

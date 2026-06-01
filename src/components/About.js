@@ -1,36 +1,16 @@
-import React from "react";
 import "../styles/About.css";
 import FadeInSection from "./FadeInSection";
 
-const About = () => {
-    const aboutMe = (
-        <p>
-            I am currently a <b>Machine Learning Intern</b> at{" "}
-            <a href="https://www.turkcell.com.tr/en/aboutus?gad_source=1&gclid=CjwKCAjwjeuyBhBuEiwAJ3vuoZnS-2WQepI3p6eRQ-I1L9jx32EqZjxC4I2YpirXQy1g4lb3FeBnxhoCuJIQAvD_BwE&gclsrc=aw.ds">
-                Turkcell
-            </a>
-            , working in the Artificial Intelligence department under the
-            Computer Vision team.
-        </p>
-    );
+const TECH_STACK = [
+    "Python",
+    "TypeScript",
+    "JavaScript",
+    "React / Next.js",
+    "PyTorch",
+    "C / C++",
+];
 
-    const currentHobbies = (
-        <p>
-            Outside of work, I'm interested in following developments in the
-            world of LLM's, frequenting the gym, playing video games, and
-            (currently) binge watching The Office skits.
-        </p>
-    );
-
-    const tech_stack = [
-        "Python",
-        "Typescript",
-        "Javascript",
-        "React/nextJS",
-        "Java",
-        "C++",
-    ];
-
+function About() {
     return (
         <div id="about">
             <FadeInSection>
@@ -39,24 +19,52 @@ const About = () => {
                 </div>
                 <div className="about-content">
                     <div className="about-description">
-                        {aboutMe}
-                        Here are some technologies I have been working with:
+                        <p>
+                            I&apos;m currently a{" "}
+                            <b>Computer Science master&apos;s student</b> at{" "}
+                            <a
+                                href="https://www.engineering.columbia.edu/academics/departments/computer-science"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Columbia University
+                            </a>
+                            . Before Columbia, I spent time as an{" "}
+                            <b>LLM Research Engineer</b> at{" "}
+                            <a
+                                href="https://www.baykartech.com/en/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Baykar
+                            </a>
+                            , working on the alignment and continual
+                            pre-training of T3AI — Turkey&apos;s first
+                            large language model.
+                        </p>
+                        Here are some of the technologies I&apos;ve been
+                        working with:
                         <ul className="tech-stack">
-                            {tech_stack.map((tech_item, i) => (
-                                <FadeInSection key={i} delay={`${i + 1}00ms`}>
-                                    <li>{tech_item}</li>
+                            {TECH_STACK.map((item, i) => (
+                                <FadeInSection key={item} delay={`${i + 1}00ms`}>
+                                    <li>{item}</li>
                                 </FadeInSection>
                             ))}
                         </ul>
-                        {currentHobbies}
+                        <p>
+                            Outside of work, I follow developments in
+                            mechanistic interpretability and LLM research,
+                            frequent the gym, play video games, and (currently)
+                            binge-watch The Office.
+                        </p>
                     </div>
                     <div className="about-image">
-                        <img alt="Can Kerem Akbulut" src={"/me.jpeg"} />
+                        <img alt="Can Kerem Akbulut" src="/me.jpeg" />
                     </div>
                 </div>
             </FadeInSection>
         </div>
     );
-};
+}
 
 export default About;

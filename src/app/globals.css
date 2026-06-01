@@ -1,0 +1,19 @@
+@import "../styles/Global.css";
+@import "../styles/App.css";
+@import "../styles/Intro.css";
+@import "../styles/About.css";
+@import "../styles/Experience.css";
+@import "../styles/Projects.css";
+@import "../styles/SidebarNav.css";
+@import "../styles/Footer.css";
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}

@@ -11,3 +11,8 @@
     --green-bright: #64ffda;
     --green-tint: rgba(100, 255, 218, 0.1);
 }
+
+body {
+    font-family: var(--font-ntr), sans-serif;
+    color: var(--slate);
+}

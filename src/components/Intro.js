@@ -1,34 +1,58 @@
-import React from "react";
-import Typist from "react-typist";
-import "react-typist/dist/Typist.css";
-import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
+"use client";
+
+import { useEffect, useState } from "react";
+import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import "../styles/Intro.css";
 
+const FULL_TITLE = "Hi, I'm Kerem.";
+const NAME_START = FULL_TITLE.indexOf("Kerem");
+
 function Intro() {
+    const [typed, setTyped] = useState(0);
+
+    useEffect(() => {
+        const start = setTimeout(() => {
+            const id = setInterval(() => {
+                setTyped((n) => {
+                    if (n >= FULL_TITLE.length) {
+                        clearInterval(id);
+                        return n;
+                    }
+                    return n + 1;
+                });
+            }, 130);
+            return () => clearInterval(id);
+        }, 600);
+        return () => clearTimeout(start);
+    }, []);
+
+    const before = FULL_TITLE.slice(0, Math.min(typed, NAME_START));
+    const name = FULL_TITLE.slice(NAME_START, typed);
+
     return (
         <div id="intro">
-            <Typist avgTypingDelay={150}>
-                <span className="intro-title">
-                    <Typist.Delay ms={1500} />
-                    {"Hi, "}
-                    {"I'm "}
-                    <span className="intro-name">{"Kerem."} </span>
+            <span className="intro-title">
+                {before}
+                <span className="intro-name">{name}</span>
+                <span className="intro-cursor" aria-hidden="true">
+                    |
                 </span>
-            </Typist>
+            </span>
             <div className="intro-subtitle">
-                ex-@UCL | currently creating things and working on some stuff
+                ex-@UCL | currently @Columbia | building things and shipping
+                code
             </div>
             <div className="intro-desc">
-                I'm a software engineer based part-time in Istanbul and
-                part-time in London. I'm interested in building websites,
-                learning about artificial intelligence and studying computer
+                I&apos;m a software engineer based part-time in New York and
+                part-time in Istanbul. I&apos;m interested in building
+                websites, training large language models, and studying computer
                 systems.
             </div>
             <a
                 href="mailto:cankeremakbulut@gmail.com"
                 className="intro-contact"
             >
-                <EmailRoundedIcon></EmailRoundedIcon>
+                <EmailRoundedIcon />
                 {"  Say hi!"}
             </a>
         </div>
