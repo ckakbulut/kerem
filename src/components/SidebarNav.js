@@ -41,7 +41,7 @@ function SidebarNav() {
                     className="sidebar-link"
                     href="mailto:cankeremakbulut@gmail.com"
                 >
-                    <EmailRoundedIcon style={{ fontSize: 20 }} />
+                    <EmailRoundedIcon style={{ fontSize: 24 }} />
                 </a>
                 <a
                     className="sidebar-link"
@@ -49,7 +49,7 @@ function SidebarNav() {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <GitHubIcon style={{ fontSize: 19 }} />
+                    <GitHubIcon style={{ fontSize: 23 }} />
                 </a>
                 <a
                     className="sidebar-link"
@@ -57,7 +57,7 @@ function SidebarNav() {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <LinkedInIcon style={{ fontSize: 21 }} />
+                    <LinkedInIcon style={{ fontSize: 25 }} />
                 </a>
             </div>
         </div>
