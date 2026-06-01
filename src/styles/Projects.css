@@ -60,7 +60,7 @@
 
 .project-name {
     font-family: var(--font-ntr), sans-serif;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     color: var(--lightest-slate);
     margin-bottom: 8px;
@@ -69,8 +69,8 @@
 
 .project-description {
     font-family: var(--font-ntr), sans-serif;
-    font-size: 16px;
-    line-height: 1.4;
+    font-size: 17px;
+    line-height: 1.45;
     color: var(--slate);
     flex-grow: 1;
     margin: 0 0 16px;
@@ -84,7 +84,7 @@
     margin: 0;
     padding: 0;
     font-family: var(--font-ntr), sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     color: var(--light-slate);
 }
 
@@ -117,10 +117,10 @@
     }
 
     .project-name {
-        font-size: 19px;
+        font-size: 20px;
     }
 
     .project-description {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
