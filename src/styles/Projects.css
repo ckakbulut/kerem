@@ -1,0 +1,126 @@
+#projects {
+    min-height: 50vh;
+    margin: auto;
+    max-width: 1000px;
+    padding-top: 100px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 36px;
+    row-gap: 56px;
+    perspective: 1200px;
+    padding: 8px 0 32px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 22px 24px 20px;
+    background-color: var(--light-navy);
+    border-radius: 14px;
+    box-shadow: 0 10px 24px -16px var(--navy-shadow);
+    color: var(--slate) !important;
+    text-decoration: none !important;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) rotateX(3deg) scale(1.02);
+    box-shadow: 0 30px 50px -20px var(--navy-shadow),
+        0 0 0 1px rgba(100, 255, 218, 0.18);
+}
+
+.project-card:hover .project-name {
+    color: var(--green-bright);
+}
+
+.project-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.project-folder {
+    color: var(--green-bright);
+}
+
+.project-links {
+    color: var(--lightest-slate);
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.project-name {
+    font-family: var(--font-ntr), sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--lightest-slate);
+    margin-bottom: 8px;
+    transition: color 0.2s ease;
+}
+
+.project-description {
+    font-family: var(--font-ntr), sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--slate);
+    flex-grow: 1;
+    margin: 0 0 16px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-ntr), sans-serif;
+    font-size: 13px;
+    color: var(--light-slate);
+}
+
+.project-tech li {
+    padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #projects {
+        padding-top: 30%;
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        row-gap: 28px;
+        column-gap: 0;
+        perspective: none;
+        padding: 4px 0 16px;
+    }
+
+    .project-card {
+        padding: 20px 20px 18px;
+        border-radius: 12px;
+    }
+
+    .project-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .project-name {
+        font-size: 19px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+}
