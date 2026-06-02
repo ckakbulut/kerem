@@ -23,7 +23,7 @@ function About() {
                             I&apos;m currently a{" "}
                             <b>Computer Science master&apos;s student</b> at{" "}
                             <a
-                                href="https://www.engineering.columbia.edu/academics/departments/computer-science"
+                                href="https://www.cs.columbia.edu/education/ms/"
                                 target="_blank"
                                 rel="noreferrer"
                             >
