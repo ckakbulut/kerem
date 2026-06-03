@@ -63,8 +63,7 @@
 
 @media only screen and (max-width: 600px) {
     #experience {
-        padding-left: unset;
-        padding-right: unset;
+        padding-top: 60px;
     }
 
     .joblist-root {

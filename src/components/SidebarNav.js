@@ -7,10 +7,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import "../styles/SidebarNav.css";
 
 const SECTIONS = [
-    { href: "#intro", label: "/home" },
-    { href: "#about", label: "/about" },
-    { href: "#experience", label: "/experience" },
-    { href: "#projects", label: "/projects" },
+    { href: "#intro", label: "/home", mobileLabel: "/home" },
+    { href: "#about", label: "/about", mobileLabel: "/about" },
+    { href: "#experience", label: "/experience", mobileLabel: "/exp" },
+    { href: "#projects", label: "/projects", mobileLabel: "/projects" },
 ];
 
 function SidebarNav() {
@@ -19,11 +19,32 @@ function SidebarNav() {
     useEffect(() => {
         const update = () => setIsMobile(window.innerWidth <= 500);
         update();
-        window.addEventListener("resize", update);
+        window.addEventListener("resize", update, { passive: true });
         return () => window.removeEventListener("resize", update);
     }, []);
 
-    if (isMobile) return null;
+    if (isMobile) {
+        return (
+            <nav className="mobile-nav" aria-label="Site navigation">
+                {SECTIONS.map((section) => (
+                    <a
+                        key={section.href}
+                        className="mobile-nav-link"
+                        href={section.href}
+                    >
+                        {section.mobileLabel}
+                    </a>
+                ))}
+                <a
+                    className="mobile-nav-link"
+                    href="mailto:cankeremakbulut@gmail.com"
+                    aria-label="Email"
+                >
+                    <EmailRoundedIcon style={{ fontSize: 20 }} />
+                </a>
+            </nav>
+        );
+    }
 
     return (
         <div className="sidebar-nav" id="sidebar">

@@ -48,3 +48,40 @@
 .sidebar-link:hover {
     color: #df7093;
 }
+
+.mobile-nav {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .mobile-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--light-navy);
+        border-top: 1px solid var(--lightest-navy);
+        padding: 10px 0 calc(10px + env(safe-area-inset-bottom));
+    }
+
+    .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-ntr), sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: var(--slate) !important;
+        text-decoration: none !important;
+        padding: 4px 8px;
+        transition: color 0.15s ease;
+    }
+
+    .mobile-nav-link:hover {
+        color: var(--green-bright) !important;
+    }
+}
