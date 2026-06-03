@@ -25,12 +25,12 @@
     color: var(--slate) !important;
     text-decoration: none !important;
     transform-style: preserve-3d;
+    will-change: transform;
     transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
         box-shadow 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .project-card:hover {
-    will-change: transform;
     transform: translateY(-10px) rotateX(3deg) scale(1.02);
     box-shadow: 0 30px 50px -20px var(--navy-shadow),
         0 0 0 1px var(--green-glow);
